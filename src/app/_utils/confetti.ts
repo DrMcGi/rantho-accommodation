@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import confetti from "canvas-confetti";
+import confetti from 'canvas-confetti';
 
 export function fireConfetti(particleCount = 90, spread = 70) {
   confetti({
