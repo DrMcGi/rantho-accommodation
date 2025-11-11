@@ -1,6 +1,7 @@
 // src/app/layout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Rantho Accommodations — Seshego, Polokwane",
@@ -18,15 +19,23 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <div className="min-h-screen flex flex-col">
           <header className="sticky top-0 z-50 backdrop-blur bg-neutral-950/60 border-b border-neutral-800">
             <nav className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
-              <a href="/" className="font-semibold tracking-wide">
+              <Link href="/" className="font-semibold tracking-wide">
                 <span className="text-neutral-100">Rantho</span>{" "}
                 <span className="text-amber-400">Accommodations</span>
-              </a>
+              </Link>
               <div className="flex gap-6 text-sm">
-                <a href="/student" className="hover:text-amber-300">Student</a>
-                <a href="/general" className="hover:text-amber-300">General</a>
-                <a href="/gallery" className="hover:text-amber-300">Gallery</a>
-                <a href="/contact" className="hover:text-amber-300">Contact</a>
+                <Link href="/student" className="hover:text-amber-300">
+                  Student
+                </Link>
+                <Link href="/general" className="hover:text-amber-300">
+                  General
+                </Link>
+                <Link href="/gallery" className="hover:text-amber-300">
+                  Gallery
+                </Link>
+                <Link href="/contact" className="hover:text-amber-300">
+                  Contact
+                </Link>
                 <a
                   href="tel:+27823183790"
                   className="rounded-md px-3 py-1.5 bg-amber-500/20 text-amber-300 hover:bg-amber-500/30"

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { fireConfetti } from "../_utils/confetti";
 
 export default function Student() {
   const [form, setForm] = useState({
@@ -50,6 +51,7 @@ Notes: ${form.notes}`
       return;
     }
     setValid(true);
+    fireConfetti(80, 70);
     window.open(whatsappLink, "_blank");
   };
 
@@ -111,10 +113,7 @@ Notes: ${form.notes}`
       </div>
 
       {/* Fallback form for WhatsApp */}
-      <form
-        onSubmit={handleSubmit}
-        className="mt-10 panel p-6 max-w-3xl"
-      >
+      <form onSubmit={handleSubmit} className="mt-10 panel p-6 max-w-3xl">
         <div className="font-semibold text-neutral-200 mb-4">Fallback booking form</div>
         <div className="grid md:grid-cols-2 gap-4">
           <div>
@@ -125,7 +124,9 @@ Notes: ${form.notes}`
               placeholder="Full names"
               className={`input ${errors.name ? "border-red-500 animate-shake" : ""}`}
             />
-            {errors.name && <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.name}</p>}
+            {errors.name && (
+              <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.name}</p>
+            )}
           </div>
 
           <div>
@@ -136,7 +137,9 @@ Notes: ${form.notes}`
               placeholder="Phone number"
               className={`input ${errors.phone ? "border-red-500 animate-shake" : ""}`}
             />
-            {errors.phone && <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.phone}</p>}
+            {errors.phone && (
+              <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.phone}</p>
+            )}
           </div>
 
           <div>
@@ -147,7 +150,9 @@ Notes: ${form.notes}`
               placeholder="Email address"
               className={`input ${errors.email ? "border-red-500 animate-shake" : ""}`}
             />
-            {errors.email && <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.email}</p>}
+            {errors.email && (
+              <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.email}</p>
+            )}
           </div>
 
           <div className="md:col-span-2">
@@ -163,7 +168,9 @@ Notes: ${form.notes}`
               <option>Shared house room</option>
               <option>Standalone bachelor room</option>
             </select>
-            {errors.room && <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.room}</p>}
+            {errors.room && (
+              <p className="text-red-500 text-xs animate-fadeIn mt-1">{errors.room}</p>
+            )}
           </div>
 
           <div className="md:col-span-2">
