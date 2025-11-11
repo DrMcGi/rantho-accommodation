@@ -1,5 +1,5 @@
-// src/app/_utils/confetti.ts
 "use client";
+
 import confetti from "canvas-confetti";
 
 export function fireConfetti(particleCount = 90, spread = 70) {

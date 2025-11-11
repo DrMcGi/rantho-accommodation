@@ -2,6 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import Link from "next/link";
+import LocalBusinessSchema from "./_components/LocalBusinessSchema";
 
 export const metadata: Metadata = {
   title: "Rantho Accommodations — Seshego, Polokwane",
@@ -24,18 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 <span className="text-amber-400">Accommodations</span>
               </Link>
               <div className="flex gap-6 text-sm">
-                <Link href="/student" className="hover:text-amber-300">
-                  Student
-                </Link>
-                <Link href="/general" className="hover:text-amber-300">
-                  General
-                </Link>
-                <Link href="/gallery" className="hover:text-amber-300">
-                  Gallery
-                </Link>
-                <Link href="/contact" className="hover:text-amber-300">
-                  Contact
-                </Link>
+                <Link href="/student" className="hover:text-amber-300">Student</Link>
+                <Link href="/general" className="hover:text-amber-300">General</Link>
+                <Link href="/gallery" className="hover:text-amber-300">Gallery</Link>
+                <Link href="/contact" className="hover:text-amber-300">Contact</Link>
                 <a
                   href="tel:+27823183790"
                   className="rounded-md px-3 py-1.5 bg-amber-500/20 text-amber-300 hover:bg-amber-500/30"
@@ -80,6 +73,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </div>
           </footer>
         </div>
+        <LocalBusinessSchema />
       </body>
     </html>
   );

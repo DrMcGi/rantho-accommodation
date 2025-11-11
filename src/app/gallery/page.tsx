@@ -1,4 +1,9 @@
 // src/app/gallery/page.tsx
+export const metadata = {
+  title: "Rantho Accommodations Gallery",
+  description: "Photos of student and general accommodation in Seshego, Polokwane.",
+};
+
 export default function Gallery() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
@@ -9,7 +14,6 @@ export default function Gallery() {
         <button className="px-3 py-1.5 rounded-md border border-neutral-700 hover:bg-white/5">General</button>
       </div>
       <div className="mt-8 grid sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {/* Placeholder cards */}
         {[...Array(6)].map((_, i) => (
           <div key={i} className="aspect-video rounded-lg border border-neutral-800 bg-white/5" />
         ))}

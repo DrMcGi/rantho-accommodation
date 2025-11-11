@@ -1,11 +1,15 @@
 // src/app/contact/page.tsx
+export const metadata = {
+  title: "Contact Rantho Accommodations",
+  description:
+    "Call, WhatsApp, or NSFAS booking links for Rantho Accommodations in Seshego, Polokwane.",
+};
+
 export default function Contact() {
   return (
     <section className="max-w-6xl mx-auto px-4 py-12">
       <h2 className="text-2xl md:text-3xl font-bold text-neutral-100">Contact</h2>
-      <p className="text-neutral-400 mt-2">
-        Reach us for bookings and questions.
-      </p>
+      <p className="text-neutral-400 mt-2">Reach us for bookings and questions.</p>
       <div className="mt-6 flex flex-wrap gap-3">
         <a
           href="tel:+27823183790"
