@@ -1,9 +1,9 @@
-import ContactClient from "./ContactClient";
+import ContactClient from './ContactClient';
 
 export const metadata = {
-  title: "Contact Rantho Accommodations",
+  title: 'Contact Rantho Accommodations',
   description:
-    "Call, WhatsApp, or NSFAS booking links for Rantho Accommodations in Seshego, Polokwane.",
+    'Call, WhatsApp, or NSFAS booking links for Rantho Accommodations in Seshego, Polokwane.',
 };
 
 export default function ContactPage() {
