@@ -1,15 +1,40 @@
 // src/app/layout.tsx
 import './globals.css';
 import type { Metadata } from 'next';
-import Link from 'next/link';
+import Header from './_components/Header';
+import Footer from './_components/Footer';
 import LocalBusinessSchema from './_components/LocalBusinessSchema';
+import { siteConfig } from './_config/site';
 
 export const metadata: Metadata = {
-  title: 'Rantho Accommodations — Seshego, Polokwane',
-  description:
-    'Student (NSFAS) and General accommodation with clear amenities and frictionless booking.',
-  // Replace with your live domain
-  metadataBase: new URL('https://example.com'),
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.seo.defaultTitle,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.seo.defaultDescription,
+  openGraph: {
+    title: siteConfig.seo.defaultTitle,
+    description: siteConfig.seo.defaultDescription,
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: siteConfig.seo.ogImage,
+        width: 1200,
+        height: 630,
+        alt: siteConfig.seo.defaultTitle,
+      },
+    ],
+    locale: 'en_ZA',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: siteConfig.seo.defaultTitle,
+    description: siteConfig.seo.defaultDescription,
+    images: [siteConfig.seo.ogImage],
+  },
   icons: [{ rel: 'icon', url: '/favicon.ico' }],
 };
 
@@ -18,74 +43,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <div className="flex min-h-screen flex-col">
-          <header className="sticky top-0 z-50 border-b border-neutral-800 bg-neutral-950/60 backdrop-blur">
-            <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3">
-              <Link href="/" className="font-semibold tracking-wide">
-                <span className="text-neutral-100">Rantho</span>{' '}
-                <span className="text-amber-400">Accommodations</span>
-              </Link>
-              <div className="flex gap-6 text-sm">
-                <Link href="/student" className="hover:text-amber-300">
-                  Student
-                </Link>
-                <Link href="/general" className="hover:text-amber-300">
-                  General
-                </Link>
-                <Link href="/gallery" className="hover:text-amber-300">
-                  Gallery
-                </Link>
-                <Link href="/contact" className="hover:text-amber-300">
-                  Contact
-                </Link>
-                <a
-                  href="tel:+27823183790"
-                  className="rounded-md bg-amber-500/20 px-3 py-1.5 text-amber-300 hover:bg-amber-500/30"
-                >
-                  Call: 082 318 3790
-                </a>
-              </div>
-            </nav>
-          </header>
+          <Header />
           <main className="flex-1">{children}</main>
-          <footer className="border-t border-neutral-800">
-            <div className="mx-auto grid max-w-6xl gap-6 px-4 py-8 text-sm md:grid-cols-3">
-              <div>
-                <div className="font-semibold text-neutral-100">Rantho Accommodations</div>
-                <p className="text-neutral-400">
-                  Student & General accommodation in Seshego, Polokwane.
-                </p>
-              </div>
-              <div>
-                <div className="font-semibold text-neutral-200">Locations</div>
-                <ul className="text-neutral-400">
-                  <li>Student: House no 2121, 8 Ramahlale Ave, Seshego Zone 2</li>
-                  <li>General: House 1243, Seshego Zone 1</li>
-                </ul>
-              </div>
-              <div>
-                <div className="font-semibold text-neutral-200">Contact</div>
-                <ul className="text-neutral-400">
-                  <li>Call / WhatsApp: 082 318 3790</li>
-                  <li>
-                    NSFAS:{' '}
-                    <a
-                      className="underline hover:text-amber-300"
-                      href="https://tymprod.nsfas.org.za/login"
-                    >
-                      Login
-                    </a>
-                    ,{' '}
-                    <a
-                      className="underline hover:text-amber-300"
-                      href="https://tymprod.nsfas.org.za/properties"
-                    >
-                      Properties
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </footer>
+          <Footer />
         </div>
         <LocalBusinessSchema />
       </body>
