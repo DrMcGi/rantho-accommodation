@@ -299,6 +299,48 @@ Notes: ${form.notes}`,
           We’ll confirm availability and next steps via WhatsApp or call.
         </p>
       </form>
+
+      <div className="panel mt-10 p-6">
+        <div className="font-semibold text-neutral-200">Frequently asked questions</div>
+        <div className="mt-4 space-y-3">
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              Where is the general accommodation located?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              {siteConfig.locations.general.street}, {siteConfig.locations.general.locality}.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              What are the prices?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              Pricing depends on the room type (shared house bed, standalone bachelor, or
+              standalone rooms). See the “Rooms & pricing” section above for the latest amounts.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              How do I book?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              Use the WhatsApp button for the fastest response, or call to confirm availability.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              Do you have bachelor rooms?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              Yes — there is a standalone bachelor option when available.
+            </p>
+          </details>
+        </div>
+      </div>
     </section>
   );
 }

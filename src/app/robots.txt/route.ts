@@ -1,7 +1,14 @@
 // src/app/robots.txt/route.ts
-export const runtime = 'edge';
+import { siteConfig } from '../_config/site';
+
 export async function GET() {
-  return new Response(`User-agent: *\nAllow: /`, {
-    headers: { 'Content-Type': 'text/plain' },
-  });
+  const sitemapUrl = new URL('/sitemap.xml', siteConfig.url).toString();
+  const host = siteConfig.url.replace(/^https?:\/\//, '');
+
+  return new Response(
+    [`User-agent: *`, `Allow: /`, ``, `Sitemap: ${sitemapUrl}`, `Host: ${host}`, ``].join('\n'),
+    {
+      headers: { 'Content-Type': 'text/plain' },
+    },
+  );
 }

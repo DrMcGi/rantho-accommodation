@@ -12,7 +12,7 @@ export const siteConfig = {
   },
   nsfas: {
     loginUrl: 'https://tymprod.nsfas.org.za/login',
-    propertiesUrl: 'https://tymprod.nsfas.org.za/properties',
+    propertiesUrl: 'https://tymprod.nsfas.org.za/properties/rantho',
   },
   locations: {
     student: {
@@ -37,11 +37,35 @@ export const siteConfig = {
     defaultTitle: 'Rantho Accommodations — Seshego, Polokwane',
     defaultDescription:
       'Luxury-inspired student (NSFAS) and general accommodation in Seshego, Polokwane. Explore premium amenities, gallery, and book instantly via WhatsApp.',
-    ogImage: '/og-image.jpg',
+    ogImage: '/opengraph-image',
   },
   highlights: {
     studentDistanceKm: 1.39,
     studentAccreditation: 'NSFAS accredited',
+  },
+  media: {
+    studentGalleryImages: [
+      {
+        src: '/student-accommodation/insideroom.jpg',
+        alt: 'Student accommodation interior room',
+      },
+      {
+        src: '/student-accommodation/outsidekitchen.jpg',
+        alt: 'Student accommodation outside kitchen area',
+      },
+      {
+        src: '/student-accommodation/outsideroom.jpg',
+        alt: 'Student accommodation outside room',
+      },
+      {
+        src: '/student-accommodation/outsiderooms.jpg',
+        alt: 'Student accommodation outside rooms',
+      },
+      {
+        src: '/student-accommodation/outsidetoilet.jpg',
+        alt: 'Student accommodation outside toilet',
+      },
+    ],
   },
 } as const;
 

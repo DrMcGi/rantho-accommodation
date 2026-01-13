@@ -1,10 +1,13 @@
 import ContactClient from './ContactClient';
+import { buildMetadata } from '../_utils/seo';
 
-export const metadata = {
-  title: 'Contact Rantho Accommodations',
+export const metadata = buildMetadata({
+  title: 'Contact',
   description:
-    'Call, WhatsApp, or NSFAS booking links for Rantho Accommodations in Seshego, Polokwane.',
-};
+    'Contact Rantho Accommodations in Seshego, Polokwane. Call, WhatsApp, or use the NSFAS property page to book student accommodation.',
+  path: '/contact',
+  keywords: ['contact accommodation Seshego', 'WhatsApp booking', 'NSFAS Rantho properties'],
+});
 
 export default function ContactPage() {
   return <ContactClient />;

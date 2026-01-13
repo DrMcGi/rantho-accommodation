@@ -1,6 +1,6 @@
 // src/app/sitemap.ts
 export default function sitemap() {
-  const base = 'https://example.com'; // replace on deploy
+  const base = 'https://ranthoaccommodations.co.za';
   return [
     { url: `${base}/`, lastModified: new Date() },
     { url: `${base}/student`, lastModified: new Date() },

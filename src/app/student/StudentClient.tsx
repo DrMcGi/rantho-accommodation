@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import LightboxGallery from '../_components/LightboxGallery';
 import { siteConfig } from '../_config/site';
 import { fireConfetti } from '../_utils/confetti';
 
@@ -122,13 +123,12 @@ Notes: ${form.notes}`,
       <div className="panel mt-10 p-6">
         <div className="font-semibold text-neutral-200">Gallery</div>
         <p className="mt-2 text-neutral-400">
-          Photos coming soon. Room‑by‑room galleries will be added.
+          A quick look at the property. More room-by-room photos will be added.
         </p>
-        <div className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-          {[...Array(6)].map((_, i) => (
-            <div key={i} className="aspect-video rounded-lg border border-neutral-800 bg-white/5" />
-          ))}
-        </div>
+        <LightboxGallery
+          images={siteConfig.media.studentGalleryImages}
+          className="mt-6 grid gap-4 sm:grid-cols-2 md:grid-cols-3"
+        />
       </div>
 
       {/* Booking form */}
@@ -224,6 +224,60 @@ Notes: ${form.notes}`,
           everything prefilled.
         </p>
       </form>
+
+      <div className="panel mt-10 p-6">
+        <div className="font-semibold text-neutral-200">Frequently asked questions</div>
+        <div className="mt-4 space-y-3">
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              Is the student accommodation NSFAS accredited?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              Yes — {siteConfig.highlights.studentAccreditation}. If you&apos;re booking via NSFAS,
+              use the NSFAS links on this page.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              How far is it from Capricorn TVET College?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              Approximately {siteConfig.highlights.studentDistanceKm} km from Capricorn TVET
+              College.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              Where is the student accommodation located?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              {siteConfig.locations.student.street}, {siteConfig.locations.student.locality}.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              How do I book a student room?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              NSFAS booking is recommended. You can also WhatsApp or call us to confirm
+              availability and get quick guidance.
+            </p>
+          </details>
+
+          <details className="rounded-lg border border-neutral-800 bg-white/5 p-4">
+            <summary className="cursor-pointer list-none font-semibold text-neutral-100">
+              What room types are available?
+            </summary>
+            <p className="mt-2 text-neutral-400">
+              The property includes bachelor rooms and shared-house rooms. Availability can change
+              — contact us for the latest options.
+            </p>
+          </details>
+        </div>
+      </div>
     </section>
   );
 }

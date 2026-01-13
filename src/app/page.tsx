@@ -1,4 +1,20 @@
 // src/app/page.tsx — Landing split selector
+import { buildMetadata } from './_utils/seo';
+
+export const metadata = buildMetadata({
+  title: 'Student & General Accommodation — Seshego, Polokwane',
+  description:
+    'Rantho Accommodations in Seshego, Polokwane: NSFAS accredited student rooms near Capricorn TVET College and affordable general rooms in Zone 1. Book via WhatsApp.',
+  path: '/',
+  keywords: [
+    'Rantho accommodation',
+    'student accommodation Polokwane',
+    'student accommodation Seshego',
+    'general accommodation Seshego',
+    'rooms to rent Polokwane',
+  ],
+});
+
 export default function Home() {
   return (
     <section className="relative">
