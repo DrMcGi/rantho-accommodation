@@ -43,7 +43,9 @@ export default function GalleryClient() {
         </button>
       </div>
       {items.length === 0 ? (
-        <div className="panel mt-8 p-6 text-neutral-400">General accommodation photos will be uploaded soon.</div>
+        <div className="panel mt-8 p-6 text-neutral-400">
+          General accommodation photos will be uploaded soon.
+        </div>
       ) : (
         <LightboxGallery images={items} className="mt-8 grid gap-4 sm:grid-cols-2 md:grid-cols-3" />
       )}

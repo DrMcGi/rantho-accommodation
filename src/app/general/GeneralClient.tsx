@@ -317,8 +317,8 @@ Notes: ${form.notes}`,
               What are the prices?
             </summary>
             <p className="mt-2 text-neutral-400">
-              Pricing depends on the room type (shared house bed, standalone bachelor, or
-              standalone rooms). See the “Rooms & pricing” section above for the latest amounts.
+              Pricing depends on the room type (shared house bed, standalone bachelor, or standalone
+              rooms). See the “Rooms & pricing” section above for the latest amounts.
             </p>
           </details>
 

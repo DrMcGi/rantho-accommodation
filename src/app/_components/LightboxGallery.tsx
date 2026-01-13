@@ -27,7 +27,8 @@ export default function LightboxGallery({
 
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setActiveIndex(null);
-      if (e.key === 'ArrowLeft') setActiveIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length));
+      if (e.key === 'ArrowLeft')
+        setActiveIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length));
       if (e.key === 'ArrowRight') setActiveIndex((i) => (i === null ? i : (i + 1) % images.length));
     };
 
@@ -62,7 +63,7 @@ export default function LightboxGallery({
               className="object-cover transition duration-500 group-hover:scale-[1.03]"
             />
             <div className="pointer-events-none absolute inset-0 bg-linear-to-t from-black/45 via-black/0 to-black/0 opacity-0 transition group-hover:opacity-100" />
-            <div className="pointer-events-none absolute bottom-2 right-2 rounded-md border border-white/10 bg-black/35 px-2 py-1 text-xs text-neutral-100 opacity-0 transition group-hover:opacity-100">
+            <div className="pointer-events-none absolute right-2 bottom-2 rounded-md border border-white/10 bg-black/35 px-2 py-1 text-xs text-neutral-100 opacity-0 transition group-hover:opacity-100">
               Click to zoom
             </div>
           </button>
@@ -96,7 +97,11 @@ export default function LightboxGallery({
               <div className="flex items-center gap-2">
                 <button
                   type="button"
-                  onClick={() => setActiveIndex((i) => (i === null ? i : (i - 1 + images.length) % images.length))}
+                  onClick={() =>
+                    setActiveIndex((i) =>
+                      i === null ? i : (i - 1 + images.length) % images.length,
+                    )
+                  }
                   className="rounded-md border border-neutral-700 bg-neutral-900 px-3 py-1.5 text-sm text-neutral-200 hover:border-amber-500/40 hover:bg-neutral-800"
                 >
                   Prev

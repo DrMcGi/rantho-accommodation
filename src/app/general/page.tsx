@@ -8,7 +8,11 @@ export const metadata = buildMetadata({
   description:
     'General accommodation in Seshego Zone 1, Polokwane — bachelor and shared rooms with clear pricing and easy WhatsApp booking.',
   path: '/general',
-  keywords: ['bachelor rooms Seshego', 'rooms to rent Seshego Zone 1', 'accommodation Polokwane Zone 1'],
+  keywords: [
+    'bachelor rooms Seshego',
+    'rooms to rent Seshego Zone 1',
+    'accommodation Polokwane Zone 1',
+  ],
 });
 
 const faqs: readonly FaqItem[] = [

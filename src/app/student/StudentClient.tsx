@@ -262,8 +262,8 @@ Notes: ${form.notes}`,
               How do I book a student room?
             </summary>
             <p className="mt-2 text-neutral-400">
-              NSFAS booking is recommended. You can also WhatsApp or call us to confirm
-              availability and get quick guidance.
+              NSFAS booking is recommended. You can also WhatsApp or call us to confirm availability
+              and get quick guidance.
             </p>
           </details>
 
@@ -272,8 +272,8 @@ Notes: ${form.notes}`,
               What room types are available?
             </summary>
             <p className="mt-2 text-neutral-400">
-              The property includes bachelor rooms and shared-house rooms. Availability can change
-              — contact us for the latest options.
+              The property includes bachelor rooms and shared-house rooms. Availability can change —
+              contact us for the latest options.
             </p>
           </details>
         </div>
