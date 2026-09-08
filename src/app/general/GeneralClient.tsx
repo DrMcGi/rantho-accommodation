@@ -71,7 +71,7 @@ Notes: ${form.notes}`,
   return (
     <section className="mx-auto max-w-6xl px-4 py-12">
       <h2 className="text-2xl font-bold text-neutral-100 md:text-3xl">
-        {siteConfig.name} — Seshego Zone 1
+        4-Room House to Rent — {siteConfig.name}, Seshego Zone 1
       </h2>
       <p className="mt-2 text-neutral-400">
         {siteConfig.locations.general.street}, {siteConfig.locations.general.locality}
@@ -82,8 +82,9 @@ Notes: ${form.notes}`,
           <div className="font-semibold text-neutral-200">Rooms & pricing</div>
           <ul className="mt-3 space-y-2 text-neutral-400">
             <li>
-              2 bedrooms in one house with dining room & kitchen —{' '}
-              <span className="font-semibold text-neutral-100">R1300</span> per bed
+              Full four-room house: 2 bedrooms, kitchen and dining room; communal toilet and bath
+              outside — available from 1 October 2026.{' '}
+              <span className="font-semibold text-neutral-100">R3500</span> negotiable
             </li>
             <li>
               1 standalone full bachelor (own restroom & bathroom) —{' '}
@@ -250,7 +251,7 @@ Notes: ${form.notes}`,
               <option value="" disabled>
                 Room preference
               </option>
-              <option>R1300 bed (house with dining & kitchen)</option>
+              <option>Full 4-room house — R3500 negotiable (available 1 October 2026)</option>
               <option>R1200 standalone bachelor (own restroom & bathroom)</option>
               <option>R850 standalone (shared outside toilets & bathroom)</option>
             </select>

@@ -72,7 +72,7 @@ export default function LightboxGallery({
 
       {active && (
         <div
-          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/80 p-4 backdrop-blur"
+          className="fixed inset-0 z-100 flex items-center justify-center bg-black/80 p-4 backdrop-blur"
           role="dialog"
           aria-modal="true"
           aria-label="Image preview"
